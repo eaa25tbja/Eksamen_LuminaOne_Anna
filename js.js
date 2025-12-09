@@ -14,11 +14,13 @@ const brownBtn = document.getElementById("brown");
 
 let activeSlide = 3;
 
+//Gør det muligt at skifte til et bestemt billede ved at gøre billedet aktivt/ikke-aktivt
 function setActiveSlide(index) {
   slides.forEach((slide) => slide.classList.remove("active"));
   slides[index].classList.add("active");
 }
 
+//Knap events, som bestemmer at når en knap bliver klikket på vises et bestemt billede
 whiteBtn.addEventListener("click", () => setActiveSlide(0));
 blackBtn.addEventListener("click", () => setActiveSlide(1));
 silverBtn.addEventListener("click", () => setActiveSlide(2));
